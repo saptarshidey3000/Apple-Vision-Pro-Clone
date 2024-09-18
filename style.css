@@ -1,0 +1,491 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: SF PRO DISPLAY;
+  }
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  #main{
+    position: realtive;
+    overflow: hidden;
+  }
+  #page1{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+  }
+  #page1>nav{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    height: 7vh;
+    width: 100vw;
+    background-color: black ;
+     top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    }
+    #page1>nav>button {
+      padding: 7px 20px;
+      border-radius: 50px;
+      border: none;
+      color: rgb(85, 77, 204);
+      background-color: white;
+      border-color: rgb(4, 4, 44);
+
+    }
+    #page1>nav>h2{
+      font-weight: 400;
+    }
+    #page1>video {
+      height: 100%;
+      width: 50%;
+      object-fit: cover;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    #page-bottom{
+      height: 44px;
+      width: 378px;
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
+  #page-bottom>h3{
+      color: #824f4f93;
+      margin-bottom: 1vw;
+  }
+  
+
+  
+  #page2 {
+    position: relative; /* Ensures child elements with absolute positioning are positioned relative to this container */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents overflow */
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    text-align: center; /* Centers text horizontally */
+}
+
+#page2 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire container */
+    z-index: 1; /* Ensure the video is behind the text */
+}
+
+#page2 > p{
+    color: white; /* Ensure the text is visible */
+    font-size: 2vw; /* Adjust font size as needed */
+    font-weight: 400;
+    line-height: 1.5; /* Adds space between lines */
+    position: absolute;
+    top: 50%;
+    max-width: 80%; /* Prevents text from overflowing */
+    padding: 0 20px; /* Optional: Adds padding to ensure text doesn't touch the edges */
+    z-index: 2; /* Ensure the text is above the video */
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#slider {
+  width: 100vw; /* Full viewport width */
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.slider-track img {
+  width: 200px; /* Smaller size for the logo */
+  margin-right: 20px; /* Space between logos */
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+
+#page3 {
+  position: relative; /* Ensures child elements with absolute positioning are positioned relative to this container */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevents overflow */
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers items horizontally */
+  text-align: center; /* Centers text horizontally */
+}
+
+#page3 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire container */
+  z-index: 1; /* Ensure the video is behind the text */
+}
+#page3 > p{
+  color: white; /* Ensure the text is visible */
+  font-size: 2vw; /* Adjust font size as needed */
+  font-weight: 400;
+  line-height: 1.5; /* Adds space between lines */
+  position: absolute;
+  top: 50%;
+  max-width: 80%; /* Prevents text from overflowing */
+  padding: 0 20px; /* Optional: Adds padding to ensure text doesn't touch the edges */
+  z-index: 2; /* Ensure the text is above the video */
+}
+#page3 > h1{
+  color: white; /* Ensure the text is visible */
+  font-size: 8vw; /* Adjust font size as needed */
+  font-weight: 400;
+  
+  position: absolute;
+  top: 60%;
+  max-width: 800%; /* Prevents text from overflowing */
+  padding: 0 5px; /* Optional: Adds padding to ensure text doesn't touch the edges */
+  z-index: 2; /* Ensure the text is above the video */
+}
+#page4 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#page4 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#page4 p {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2vw;
+  z-index: 1;
+}
+
+#page4 h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 5vw;
+  text-align: center;
+  z-index: 1;
+}
+
+#page5{
+  position: relative;
+  height: 50vh;
+  width: 100vw;
+  background-color: white;
+}
+#page5>button{
+  font-size: 24px; /* Increase this value to make the text bigger */
+  padding: 15px 30px;
+  
+  background-color: #ffffff; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */ /* Adjust padding to make the button larger */
+  font-weight: bold; /* Optional: make the text bold */
+  border-radius: 5px; /* Optional: rounded corners */
+  color: rgb(220, 60, 16); /* Text color */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+#page5>button:hover{
+  
+  color: rgb(220, 60, 16); 
+  text-decoration: underline; /* Adds underline on hover */
+  text-decoration-color: rgb(220, 60, 16); /* Changes underline color */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+#page5 > img{
+  width: 20%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#page6{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+ 
+}
+#page6 > img{
+  width: 70%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#page6>button{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  padding: 15px 30px;
+  border: 1px solid #000;
+  font-weight: 500;
+  background-color: #fff;
+  border-radius: 50px;
+  font-size: 1.4vw;
+  transform: translateX(-50%);
+}
+#page6>button:hover{
+  color: rgb(255, 255, 255); 
+  background-color: black; 
+}
+/* #page7{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  height: 70vh;
+  width: 100vw;
+  background-color: #f5f5f7;
+}
+ #page7>h3{
+  margin-bottom: 1vw;
+  font-size: 2vw;
+ }
+ #page7>h1{
+  margin-bottom: 1vw;
+  font-size: 4vw;
+ }
+ #page7>p {
+  font-size: 1.2vw;
+  width: 60%;
+    font-weight: 700;
+    color: #545454c9;
+ } */
+  #page7 {
+    display: flex;
+    position: relative;
+    height: 70vh;
+    width: 100vw;
+    margin-top: -300px;
+  }
+  .left{
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+.left>h1{
+    font-size: 2.3vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+}
+.right{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  padding-left: 5vw;
+}
+.right>h3{
+  font-size: 2vw;
+  width: 90%;
+  color: #484848d7;
+}
+.right>button{
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff823d;
+  color: #fff;
+  font-weight: 400;
+  border-radius: 50px;
+  font-size: 1.3vw;
+  margin-top: 1.5vw;
+}
+.right>button:hover{
+ color: #ff823d;
+ background-color: #ffffff;
+ border: 1px solid #000;
+}
+#page8{
+  position: relative; /* Ensures child elements with absolute positioning are positioned relative to this container */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevents overflow */
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers items horizontally */
+  text-align: center; /* Centers text horizontally */
+}
+
+#page8 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire container */
+  z-index: 1; /* Ensure the video is behind the text */
+}
+#page8 > p{
+  color: white; /* Ensure the text is visible */
+  font-size: 2vw; /* Adjust font size as needed */
+  font-weight: 400;
+  line-height: 1.5; /* Adds space between lines */
+  position: absolute;
+  top: 50%;
+  max-width: 80%; /* Prevents text from overflowing */
+  padding: 0 20px; /* Optional: Adds padding to ensure text doesn't touch the edges */
+  z-index: 2; /* Ensure the text is above the video */
+}
+#page8 > h1{
+  color: white; /* Ensure the text is visible */
+  font-size: 2vw; /* Adjust font size as needed */
+  font-weight: 400;
+  
+  position: absolute;
+  top: 60%;
+  max-width: 800%; /* Prevents text from overflowing */
+  padding: 0 5px; /* Optional: Adds padding to ensure text doesn't touch the edges */
+  z-index: 2; /* Ensure the text is above the video */
+}
+#page9 {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin-bottom: -100px;
+}
+.left9{
+  position: relative;
+  height: 100%;
+  width: 50%;
+  top: 100px;
+}
+.left9>h1{
+  font-size: 2.3vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+}
+.right9{
+display: flex;
+align-items: start;
+justify-content: center;
+flex-direction: column;
+height: 100%;
+width: 50%;
+padding-left: 5vw;
+position: relative;
+top: -70px;
+}
+.right9>h3{
+font-size: 2vw;
+width: 90%;
+color: #484848d7;
+}
+.right9>button{
+padding: 10px 20px;
+border: none;
+background-color: #ff823d;
+color: #fff;
+font-weight: 400;
+border-radius: 50px;
+font-size: 1.3vw;
+margin-top: 1.5vw;
+}
+.right9>button:hover{
+color: #ff823d;
+background-color: #ffffff;
+border: 1px solid #000;
+}
+#page10{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  height: 70vh;
+  width: 100vw;
+  background-color: #f5f5f7;
+}
+#page10>h4{
+  margin-bottom: 1vw;
+  font-size: 3vw;
+}
+#page10>h1{
+  margin-bottom: 1vw;
+  font-size: 4vw;
+}
+#page10>p{
+  font-size: 2vw;  
+  width: 50%;
+  font-weight: 700;
+  color: #100e0e22;
+}
+/* #page11{
+  position: relative;
+  height: 900vh;
+  width: 100vw;
+  background-color: #f5f5f7;
+}
+
+#page11>canvas{
+  position: relative;
+  max-width: 100vw;
+  max-height: 100vh;
+  z-index: 99;
+} */
+#page11{
+  background-color: #f5f5f7;
+}
