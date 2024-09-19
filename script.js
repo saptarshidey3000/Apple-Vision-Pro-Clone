@@ -95,51 +95,47 @@ gsap.to("#page2 > p", {
 // Animate the <p> element upwards
 gsap.to("#page3 > p", {
   scrollTrigger: {
-      trigger: "#page3",
-      start: "top top", // Adjust the start point to center
-       // Adjust the end point
-     
-      scrub: 1,
-      scroller: "#main",
+    trigger: "#page3",
+    start: "top top", // Start the animation when #page8's top reaches the center of the viewport
+    // end: "bottom center", // End the animation when #page8's bottom reaches the center of the viewport
+    scrub: 2, // Smoother animation
+    scroller: "#main",
   },
-  top: "-100%", // Adjust the movement to prevent it from moving completely out of the screen
+  top: "-100%", // Move upwards by 100% of its own height
 });
 
-// Animate the <h1> element upwards in #page3
+// Animate the <h1> element after the <p>
 gsap.to("#page3 > h1", {
   scrollTrigger: {
-      trigger: "#page3",
-      start: "top top", // Adjust the start point to center
-      // Adjust the end point
-     
-      scrub: 1,
-      scroller: "#main",
+    trigger: "#page3",
+    start: "top top", // Start the animation when #page8's top reaches 75% of the viewport height (delays the start)
+    // end: "bottom center", // End the animation when #page8's bottom reaches the center of the viewport
+    scrub: 2, // Smoother animation
+    scroller: "#main",
   },
-  y: "-100%", // Adjust the movement to prevent it from moving completely out of the screen
+  top: "-100%", // Move upwards by 100% of its own height
 });
 gsap.to("#page4 > p", {
   scrollTrigger: {
     trigger: "#page4",
-    start: "top center", // Start when the top of page4 reaches the center of the viewport
-    // end: "top center", // End when the bottom of page4 reaches the center of the viewport
-    scrub: 2, // Increase this value to make the animation slower and smoother
+    start: "top top", // Start the animation when #page8's top reaches the center of the viewport
+    // end: "bottom center", // End the animation when #page8's bottom reaches the center of the viewport
+    scrub: 2, // Smoother animation
     scroller: "#main",
   },
-  y: "-100%", // Move upwards by 100% of its own height
-  opacity: 0, // Fade out as it moves
+  top: "-100%", // Move upwards by 100% of its own height
 });
 
-// Animation for the heading in page4
+// Animate the <h1> element after the <p>
 gsap.to("#page4 > h1", {
   scrollTrigger: {
     trigger: "#page4",
-    start: "top top", // Start when the top of page4 reaches the center of the viewport
-    end: "top top", // End when the bottom of page4 reaches the center of the viewport
-    scrub: 2, // Increase this value to make the animation slower and smoother
+    start: "top top", // Start the animation when #page8's top reaches 75% of the viewport height (delays the start)
+    // end: "bottom center", // End the animation when #page8's bottom reaches the center of the viewport
+    scrub: 2, // Smoother animation
     scroller: "#main",
   },
-  y: "-100%", // Move upwards by 100% of its own height
-  // opacity: 0, // Fade out as it moves
+  top: "-100%", // Move upwards by 100% of its own height
 });
 // Animate the <p> element first
 gsap.to("#page8 > p", {
@@ -403,7 +399,7 @@ snap: "frame",
 ease: `none`,
 scrollTrigger: {
   scrub: 0.15,
-  trigger: `#page11>canvas`,
+  trigger: `canvas`,
   //   set start end according to preference
   start: `top top`,
   end: `600% top`,
@@ -440,7 +436,7 @@ ctx.drawImage(
 }
 ScrollTrigger.create({
 
-trigger: "#page11>canvas",
+trigger: "canvas",
 pin: true,
 // markers:true,
 scroller: `#main`,
