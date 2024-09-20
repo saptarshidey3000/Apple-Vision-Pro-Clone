@@ -713,3 +713,45 @@ border: 1px solid #000;
   font-weight: 500;
   border: none;
 }
+#page21{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  top: 0%;
+}
+#page21>canvas{
+  position: relative;
+  max-width: 100vw;
+  max-height: 100vw;
+}
+#top-page21>h1{
+  position: absolute;
+  color: white;
+  z-index: 99;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3vw;  
+  font-weight: 500;
+}
+#top-page21>h1>span{
+
+  position: absolute;
+  left: 30%;
+  bottom: 90%;
+  font-size: 4vw;  
+  font-weight: 700;
+}
+#top-page21>p {
+  font-size: 1.2vw;
+  font-weight: 100;
+  width: 50%;
+  color: rgb(180, 175, 175);
+  position: absolute;
+  top:35% ;
+  left: 25%;
+  z-index: 99;
+}
+#top-page21>p>span{
+  color: white;
+}

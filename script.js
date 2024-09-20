@@ -161,6 +161,8 @@ gsap.to("#page8 > h1", {
   top: "-100%", // Move upwards by 100% of its own height
 });
 
+
+
 function canvas(){
   const canvas = document.querySelector("#page11>canvas");
 const context = canvas.getContext("2d");
@@ -446,3 +448,137 @@ end: `600% top`,
 });
 }
 canvas();
+
+gsap.to("#top-page21 > h1", {
+  scrollTrigger: {
+    trigger: "#top-page21",
+    start: "bottom top", // Start the animation when #page8's top reaches 75% of the viewport height (delays the start)
+    // end: "bottom center", // End the animation when #page8's bottom reaches the center of the viewport
+    scrub: 4, // Smoother animation
+    scroller: "#main",
+  },
+  top: "-100%", // Move upwards by 100% of its own height
+});
+gsap.to("#top-page21 > p", {
+  scrollTrigger: {
+    trigger: "#top-page21",
+    start: "bottom top", // Start the animation when #page8's top reaches 75% of the viewport height (delays the start)
+    // end: "bottom center", // End the animation when #page8's bottom reaches the center of the viewport
+    scrub: 4, // Smoother animation
+    scroller: "#main",
+  },
+  top: "-100%", // Move upwards by 100% of its own height
+});
+
+function canvas1(){
+  const canvas = document.querySelector("#page21>canvas");
+const context = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+
+window.addEventListener("resize", function () {
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+render();
+});
+
+function files(index) {
+var data = `
+.//canvus_images/Vision00001.png
+.//canvus_images/Vision00002.png
+.//canvus_images/Vision00003.png
+.//canvus_images/Vision00004.png
+.//canvus_images/Vision00005.png
+.//canvus_images/Vision00006.png
+.//canvus_images/Vision00007.png
+.//canvus_images/Vision00008.png
+.//canvus_images/Vision00009.png
+.//canvus_images/Vision00010.png
+.//canvus_images/Vision00011.png
+.//canvus_images/Vision00012.png
+.//canvus_images/Vision00013.png
+.//canvus_images/Vision00014.png
+.//canvus_images/Vision00015.png
+.//canvus_images/Vision00016.png
+.//canvus_images/Vision00017.png
+.//canvus_images/Vision00018.png
+.//canvus_images/Vision00019.png
+.//canvus_images/Vision00020.png
+.//canvus_images/Vision00021.png
+.//canvus_images/Vision00022.png
+.//canvus_images/Vision00023.png
+.//canvus_images/Vision00024.png
+.//canvus_images/Vision00025.png
+`;
+return data.split("\n")[index];
+}
+
+const frameCount = 25;
+
+const images = [];
+const imageSeq = {
+frame: 1,
+};
+
+for (let i = 0; i < frameCount; i++) {
+const img = new Image();
+img.src = files(i);
+images.push(img);
+}
+
+gsap.to(imageSeq, {
+frame: frameCount - 1,
+snap: "frame",
+ease: `none`,
+scrollTrigger: {
+  scrub: 0.15,
+  trigger: `#page21`,
+  //   set start end according to preference
+  start: `top top`,
+  end: `80% top`,
+  scroller: `#main`,
+},
+onUpdate: render,
+});
+
+images[1].onload = render;
+
+function render() {
+scaleImage(images[imageSeq.frame], context);
+}
+
+function scaleImage(img, ctx) {
+var canvas = ctx.canvas;
+var hRatio = canvas.width / img.width;
+var vRatio = canvas.height / img.height;
+var ratio = Math.max(hRatio, vRatio);
+var centerShift_x = (canvas.width - img.width * ratio) / 2;
+var centerShift_y = (canvas.height - img.height * ratio) / 2;
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+ctx.drawImage(
+  img,
+  0,
+  0,
+  img.width,
+  img.height,
+  centerShift_x,
+  centerShift_y,
+  img.width * ratio,
+  img.height * ratio
+);
+}
+ScrollTrigger.create({
+
+trigger: "#page21",
+pin: true,
+// markers:true,
+scroller: `#main`,
+//   set start end according to preference
+start: `top top`,
+end: `80% top`,
+});
+}
+canvas1();
+
