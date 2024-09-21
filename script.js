@@ -452,7 +452,7 @@ canvas();
 gsap.to("#top-page21 > h1", {
   scrollTrigger: {
     trigger: "#top-page21",
-    start: "bottom top", // Start the animation when #page8's top reaches 75% of the viewport height (delays the start)
+    start: "bottom", // Start the animation when #page8's top reaches 75% of the viewport height (delays the start)
     // end: "bottom center", // End the animation when #page8's bottom reaches the center of the viewport
     scrub: 4, // Smoother animation
     scroller: "#main",
@@ -462,7 +462,7 @@ gsap.to("#top-page21 > h1", {
 gsap.to("#top-page21 > p", {
   scrollTrigger: {
     trigger: "#top-page21",
-    start: "bottom top", // Start the animation when #page8's top reaches 75% of the viewport height (delays the start)
+    start: "bottom", // Start the animation when #page8's top reaches 75% of the viewport height (delays the start)
     // end: "bottom center", // End the animation when #page8's bottom reaches the center of the viewport
     scrub: 4, // Smoother animation
     scroller: "#main",
@@ -582,3 +582,31 @@ end: `80% top`,
 }
 canvas1();
 
+var tl1 = gsap.timeline({
+  scrollTrigger:{
+      trigger:`#page24`,
+      start:`top top`,
+      scrub:1,
+      scroller:`#main`,
+      pin:true
+  }
+})
+
+
+tl1.to("#page24>#off",{
+  opacity:0
+})
+var tl2 = gsap.timeline({
+  scrollTrigger:{
+      trigger:`#page25`,
+      start:`top top`,
+      scrub:1,
+      scroller:`#main`,
+      pin:true
+  }
+})
+
+
+tl2.to("#page25>#soff",{
+  opacity:0
+})

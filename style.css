@@ -722,7 +722,7 @@ border: 1px solid #000;
 #page21>canvas{
   position: relative;
   max-width: 100vw;
-  max-height: 100vw;
+  max-height: 500vw;
 }
 #top-page21>h1{
   position: absolute;
@@ -743,7 +743,7 @@ border: 1px solid #000;
   font-weight: 700;
 }
 #top-page21>p {
-  font-size: 1.2vw;
+  font-size: 2vw;
   font-weight: 100;
   width: 50%;
   color: rgb(180, 175, 175);
@@ -755,3 +755,122 @@ border: 1px solid #000;
 #top-page21>p>span{
   color: white;
 }
+#page22{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 30vh;
+  width: 100vw;
+  background-color: #000;
+  flex-direction: column;
+  font-size: 1.5vw;
+}
+#page22>h5{
+  width: 35%;
+  color: rgb(168, 162, 162);
+}
+#page22>h5>span{
+    color: white;
+}
+#page23{
+  position: relative;
+  display: flex;
+  height: 120vh;
+  width: 100vw;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+#page23>video{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#center-page23{
+  position: absolute;
+  height: 50%;
+  width: 20%;
+  bottom: 15%;
+  right: 15%;
+  color: white;
+}
+#center-page23>h1{
+  margin-bottom: 1.7vw;
+}
+#center-page23>h4{
+  color: rgb(181, 179, 179);
+}
+#center-page23>h4>span{
+  color: white;
+  
+}
+#page24{
+  position: relative;
+  height: 120vh;
+  width: 100vw;
+  background-color: black;
+}
+#page24>#off{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 50%;
+  z-index: 9;
+}
+#page24>#on{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 50%;
+}
+#bottom-page24>h1{
+  position: absolute;
+  bottom: 18%;
+  left: 35%;
+  z-index: 99;
+  color: white;
+}
+#bottom-page24>p{
+  position: absolute;
+  bottom: 3%;
+  left: 35%;
+  z-index: 99;
+  color: rgb(171, 167, 167);
+  width: 30%;
+  font-size: large;
+
+}
+#bottom-page24>p>span{
+  color: white;
+}
+#page25{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+}
+#page25>#soff{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  width: 50%;
+  z-index: 9;
+}
+#page25>#son{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  width: 50%;
+}
+
